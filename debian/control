@@ -1,0 +1,19 @@
+Source: xc8
+Section: compilers
+Priority: extra
+XBSC-Family: pic18
+Maintainer: Matt Jenkins <matt@majenko.co.uk>
+Build-Depends: debhelper (>= 8.0.0)
+Standards-Version: 3.9.4
+
+Package: xc8
+Homepage: http://www.microchip.com/pagehandler/en-us/devtools/mplabxc/home.html
+Architecture: all
+Description: Microchip XC8 compiler
+ This package is a UECIDE stub for executing a natively installed
+ instance of the XC8 compiler.  Due to licensing we are unable to
+ provide the compiler itself. Download the compiler binaries from
+ Microchip and install them separately.
+ .
+ http://www.microchip.com/pagehandler/en-us/devtools/mplabxc/home.html
+
