@@ -33,14 +33,14 @@ compiler.library.prefix=
 
 compile.liboption=${cache.root}/${library}.lpp
 
-compile.c=${xc8}::${cflags}::${core.flags}::${board.flags}::${includes}::--chip=${mcu}::-o${object.name}::${source.name}
-compile.cpp=${xc8}::${cflags}::${core.flags}::${board.flags}::${includes}::--chip=${mcu}::-o${object.name}::${source.name}
-compile.S=${xc8}::${cflags}::${core.flags}::${board.flags}::${includes}::--chip=${mcu}::-o${object.name}::${source.name}
+compile.c=${xc8}::${cflags}::${core.flags}::${board.flags}::${includes}::--chip=${build.mcu}::-o${object.name}::${source.name}
+compile.cpp=${xc8}::${cflags}::${core.flags}::${board.flags}::${includes}::--chip=${build.mcu}::-o${object.name}::${source.name}
+compile.S=${xc8}::${cflags}::${core.flags}::${board.flags}::${includes}::--chip=${build.mcu}::-o${object.name}::${source.name}
 compile.ar=${libr}::r::${library}::${object.name}
 #compile.eep=
 #compile.hex=
 #compile.lss=${objdump}::-h::-S::${build.path}/${filename}.elf
-compile.link=${xc8}::${ldflags}::${core.ldflags}::${board.ldflags}::--chip=${mcu}::-o${filename}.cof::${libraries}::${object.filelist}
+compile.link=${xc8}::${ldflags}::${core.ldflags}::${board.ldflags}::--chip=${build.mcu}::-o${filename}.cof::${libraries}::${object.filelist}
 #compile.size=${size}::${build.path}/${filename}.elf
 
 #compile.bin=${objcopy}::--input::binary::--output-target::elf32-tradlittlemips::--binary-architecture::mips::--rename-section::.data=.text,alloc,load,readonly,code,share,contents::${source.name}::${object.name}
