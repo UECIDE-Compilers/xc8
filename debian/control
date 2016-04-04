@@ -10,10 +10,7 @@ Package: xc8
 Homepage: http://www.microchip.com/pagehandler/en-us/devtools/mplabxc/home.html
 Architecture: all
 Description: Microchip XC8 compiler
- This package is a UECIDE stub for executing a natively installed
- instance of the XC8 compiler.  Due to licensing we are unable to
- provide the compiler itself. Download the compiler binaries from
- Microchip and install them separately.
+ Wrapper for system-installed XC8 compiler.
  .
- http://www.microchip.com/pagehandler/en-us/devtools/mplabxc/home.html
-
+ This allows the use of the Microchip® XC8® compiler for PIC18® devices. In order for it to work you must first have 
+ installed the XC8 compiler downloadable from http://www.microchip.com/mplab/compilers
