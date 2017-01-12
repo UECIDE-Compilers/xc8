@@ -45,8 +45,11 @@ compile.link=${xc8}::${ldflags}::${core.ldflags}::${board.ldflags}::--chip=${bui
 
 #compile.bin=${objcopy}::--input::binary::--output-target::elf32-tradlittlemips::--binary-architecture::mips::--rename-section::.data=.text,alloc,load,readonly,code,share,contents::${source.name}::${object.name}
 
-compiler.error=^([^:]+):(\\d+):\\d+: error: (.*)
-compiler.warning=^([^:]+):(\\d+): Warning: (.*)
+compiler.error=^(.*):(\d+): error: (.*)
+compiler.warning=^(.*):(\d+): Warning: (.*)
+
+#/home/matt/Documents/UECIDE/uPR_JHG/uPR_JHG.ino:318: error: (192) undefined identifier "altatart"
+
 
 options.warnings.name=Warnings
 options.warnings.default=off
