@@ -1,7 +1,7 @@
 Source: xc8
 Section: compilers
 Priority: extra
-XBSC-Family: pic18
+XBSC-Family: pic18,pic16
 Maintainer: Matt Jenkins <matt@majenko.co.uk>
 Build-Depends: debhelper (>= 8.0.0)
 Standards-Version: 3.9.4

@@ -4,7 +4,7 @@
 #compiler.bin=/path/to/compiler/bin/folder/
 
 name=xc8
-family=pic18
+family=pic18::pic16
 compiler.version=1
 compiler.revision=12
 version=1
