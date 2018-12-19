@@ -1,7 +1,7 @@
 # Set the path of the compiler here if it's not in your system path.  
 # Be sure to include the trailing /.
 #
-#compiler.bin=/path/to/compiler/bin/folder/
+compiler.bin=${prefs:compilers.xc8.path}/
 
 name=xc8
 family=pic18::pic16
@@ -20,7 +20,7 @@ cppflags=${cflags}
 ldflags=-G::--double=24::--float=24::--emi=wordwrite::--opt=default,+asm,+asmfile,-speed,+space,-debug::--addrqual=ignore::--mode=free::-P::-N255::--warn=0::--asmlist::--summary=default,-psect,-class,+mem,-hex,-file::--output=default,-inhx032::--runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,+plib::--errformat=%f:%l: error: (%n) %s::--warnformat=%f:%l: warning: (%n) %s::--msgformat=%f:%l: advisory: (%n) %s
 
 xc8=${compiler.bin}xc8
-libr=${compiler.bin}libr
+libr=${onefile:${compiler.bin}libr,${compiler.bin}xc8-ar}
 objcopy=${compiler.bin}objcopy
 objdump=${compiler.bin}objdump
 size=${compiler.bin}size
@@ -73,4 +73,14 @@ options.optim.l2.flags=-O2
 options.optim.l2.name=Level 2
 options.optim.l3.flags=-O3
 options.optim.l3.name=Level 3
+
+
+prefs.compilers.type=section
+prefs.compilers.name=Compilers
+prefs.compilers.xc8.name=XC8
+prefs.compilers.xc8.type=section
+prefs.compilers.xc8.path.name=Path to XC8 Bin Folder
+prefs.compilers.xc8.path.type=dirselect
+prefs.compilers.xc8.path.default.windows=C:\\Program Files (x86)\\Microchip\\XC8\\v2.0.0\\bin
+prefs.compilers.xc8.path.default.linux=/opt/microchip/xc8/v2.00/bin
 
